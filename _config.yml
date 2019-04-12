@@ -1,6 +1,6 @@
 # Site settings
 title: Jackie Blog
-SEOTitle: Jackie | BY Blog
+SEOTitle: Jackie Blog
 header-img: img/post-bg-keybord.jpg
 email: a416485164@gmail.com
 description: "The harder you work, the luckier you get."
@@ -30,10 +30,10 @@ twitter_username:   a416485164
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-#permalink: pretty
-#paginate: 10
-#exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-#anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
 
@@ -100,10 +100,10 @@ service-worker: true
 friends: [
     {
         title: "Xiaoyuan Ma",
-        href: "https://seanseye.wordpress.com/"
+        href: "https://seanseye.wordpress.com"
     },{
         title: "博客园",
-        href: "https://www.cnblogs.com/wojiaxiaoguo/"
+        href: "https://www.cnblogs.com/wojiaxiaoguo"
     },{
         title: "CSDN",
         href: "https://blog.csdn.net/qq_23958451"
