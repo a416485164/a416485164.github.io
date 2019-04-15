@@ -8,6 +8,7 @@ header-img: img/post-bg-miui-ux.jpg
 catalog: true
 tags:
     - Geophones
+    - Measuring the breath
 ---
 
 # Monitoring a Person’s Heart Rate and Respiratory Rate on a Shared Bed Using Geophones
