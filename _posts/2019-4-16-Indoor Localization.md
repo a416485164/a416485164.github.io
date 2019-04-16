@@ -17,7 +17,7 @@ tags:
 ![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Aircraf1.jpg)
 
 The main contribution of this article is to use the aircraft's signals for indoor positioning.The prototype implementation achieves a user localization accuracy of approximately 25 meters. 
-the localization system consists of: 
+The localization system consists of: 
 • a network of receivers with known positions, which we call ground stations;
 • a receiver whose position should be determined – we refer to this receiver as the handset;
 • a server, which connects the ground stations and the handset
