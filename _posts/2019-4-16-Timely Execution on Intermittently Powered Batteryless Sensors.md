@@ -36,7 +36,9 @@ leaving the developer with few ways to strongly and safely express time constrai
 ## Contributions
 The Mayfly language is a declarative, graph based programming language that enables developers to focus on application policy, sensing goals, and timing of sensing tasks while reducing the cognitive burden of intermittent programming.Mayfly is a coordination language and runtime built on top of Embedded-C that combines intermittent execution fragments to form coherent sensing schedules—maintaining forward progress, data consistency, data freshness, and data utility across multiple power failures. Mayfly makes the passing of time explicit, binding data to the time it was gathered, and keeping track of data and time through power failures.
 
- ### <p>Paper <a href="http://www.cs.virginia.edu/~bjc8c/class/cs6501-f18/papers/hester17mayfly.pdf">👉Paper Pages</a>
+### Paper
+
+<p>Paper <a href="http://www.cs.virginia.edu/~bjc8c/class/cs6501-f18/papers/hester17mayfly.pdf">👉Paper Pages</a>
 
 
 
