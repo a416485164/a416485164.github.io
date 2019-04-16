@@ -49,7 +49,7 @@ Given the 900 MHz RFID signal, even a parasitic capacitance of a few pF can resu
 
 <p>Paper <a href="https://www.iotjournaal.nl/wp-content/uploads/2018/11/mobicom18-rfid-hacking-camera-ready.pdf">👉Paper Pages</a>
 
-<p>Video<a href="https://translate.google.cn/#view=home&op=translate&sl=en&tl=zh-CN&text=video">👉Video</a>
+<p>Video <a href="https://www.youtube.com/watch?v=fpcyilzJE7c&feature=youtu.be">👉Video</a>
 
 
 
