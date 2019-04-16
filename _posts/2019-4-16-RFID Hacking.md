@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Challenge: RFID Hacking for Fun and Profit Batteryless Sensors
+title:      Challenge:RFID Hacking for Fun and Profit Batteryless Sensors
 subtitle:   RFID
 date:       2019-04-16
 author:     Jackie
@@ -10,7 +10,7 @@ tags:
     - RFID Hacking
 ---
 
-# Challenge: RFID Hacking for Fun and Profit Batteryless Sensors
+# Challenge:RFID Hacking for Fun and Profit Batteryless Sensors
 
 ![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/RFID1.jpg)
 
@@ -43,9 +43,13 @@ In our current implementation, it takes ∼0.1-7.2 s to estimate DMRT, since eac
 ### Removing the parasitic capacitance.
 Given the 900 MHz RFID signal, even a parasitic capacitance of a few pF can result in the sensor’s impedance exceeding the target range or potentially short circuit the sensor. To solve this problem, we place an additional small capacitor in series with the sensor to limit its impedance. However, this can reduce the sensor’s accuracy. Alternatively, it is possible to cancel the parasitic capacitance by putting an appropriate inductor in parallel with the sensor. This inductor, of the order of a few nH, must be chosen with care. 
 
-### Paper
+### Paper and Video
 
 <p>Paper <a href="https://www.iotjournaal.nl/wp-content/uploads/2018/11/mobicom18-rfid-hacking-camera-ready.pdf">👉Paper Pages</a>
+
+<p>Video<a href="https://translate.google.cn/#view=home&op=translate&sl=en&tl=zh-CN&text=video">👉Video</a>
+
+
 
 
 
