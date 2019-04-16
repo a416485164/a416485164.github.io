@@ -33,6 +33,8 @@ Figure 1 shows the concept of our system. The ground stations and the handset se
 ![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Aircraf6.jpg)
 ![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Aircraf4.jpg)
 
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Aircraf5.jpg)
+
 ![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Aircraf2.jpg)
 
 Plenty of accuracy improvements to our prototype system are possible:
@@ -42,6 +44,7 @@ Plenty of accuracy improvements to our prototype system are possible:
 • Precisely localizing ground station positions.
 • Choosing an optimal placement of the ground stations, to reduce error sources such as multipath and to maximize received signal strength, number of received messages and observed unique aircraft.
 
+ <p>飞机信息 <a href="https://www.flightradar24.com/49.83,29.29/8">👉Aircraft Pages</a>.
 
 
 
