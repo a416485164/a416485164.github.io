@@ -21,13 +21,13 @@ tags:
 ***
 ## Main Content
 This paper discusses how to use simple modifications of
-commodity RFID tags to turn them into batteryless, wireless, low-cost sensorsBy suitably integrating a phototransistor or a thermistor into a commodity RFID tag, which can convert it into the light or temperature sensor.The author also propose and evaluate a new legacy-compatible tag reading protocol called Differential Minimum Response Threshold (DMRT) that is robust to the changes in the RF environment.
+commodity RFID tags to turn them into batteryless, wireless, low-cost sensors. By suitably integrating a phototransistor or a thermistor into a commodity RFID tag, which can convert it into the light or temperature sensor.The author also propose and evaluate a new legacy-compatible tag reading protocol called Differential Minimum Response Threshold (DMRT) that is robust to the changes in the RF environment.
 
 ![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/RFID3.jpg)
 
 Figure 4 shows the steps to modify an RFID tag. First remove the plastic cover on the tag to expose the antenna, which is a thin metallic strip on a plastic base. Next, cut away a small part of its antenna. Finally, place a sensor such as a phototransistor or a thermistor to replace the cut part and secure it on the tag using the clear plastic tape.
 
-
+***
 
 ## CHALLENGES AND DISCUSSION
 
@@ -42,6 +42,8 @@ In our current implementation, it takes ∼0.1-7.2 s to estimate DMRT, since eac
 
 ### Removing the parasitic capacitance.
 Given the 900 MHz RFID signal, even a parasitic capacitance of a few pF can result in the sensor’s impedance exceeding the target range or potentially short circuit the sensor. To solve this problem, we place an additional small capacitor in series with the sensor to limit its impedance. However, this can reduce the sensor’s accuracy. Alternatively, it is possible to cancel the parasitic capacitance by putting an appropriate inductor in parallel with the sensor. This inductor, of the order of a few nH, must be chosen with care. 
+
+***
 
 ### Paper and Video
 
