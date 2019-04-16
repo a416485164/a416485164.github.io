@@ -3,7 +3,7 @@ title: Jackie Blog
 SEOTitle: Jackie Blog
 header-img: img/post-bg-keybord.jpg
 email: a416485164@gmail.com
-description: "The harder you work, the luckier you get."
+description: "The more efforts you make, the more fortunes you get."
 keyword: "Jackie Blog, IoT, WSN, Battery-free, Wearable device"
 url: "http://a416485164.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -11,7 +11,7 @@ github_repo: "https://github.com/a416485164/a416485164.github.io.git" # you code
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "The harder you work, the luckier you get!"
+sidebar-about-description: "The more efforts you make, the more fortunes you get."
 sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
