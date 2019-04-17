@@ -18,11 +18,14 @@ Low-power wireless communication  needs
 Lack of confidence in results
 
 the divergence across experimental setups is even higher
+
 ***
 
 ## Definition
 A benchmark typically defines input parameters representative of several application cases, output metrics quantifying the performance of the benchmarked systems, and possibly the required experimental setup.
+
 ***
+
 ## Goals
 bring a standard and consistent way to test and compare low-power wireless networking protocols.
 
@@ -45,7 +48,9 @@ The first step is the definition of parameters, metrics, and profiles,useful way
 1,Parameters and metrics: Input parameters, Output metrics, Observed metrics;
 
 2,Profiles: in the n-dimensional space determined by n input parameters
+
 ***
+
 ### Paper
 
 <p>Paper <a href="http://www.diva-portal.org/smash/get/diva2:1233420/FULLTEXT01.pdf">👉Paper Pages</a>
