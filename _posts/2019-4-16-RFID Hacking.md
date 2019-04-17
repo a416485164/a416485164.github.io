@@ -56,6 +56,7 @@ Given the 900 MHz RFID signal, even a parasitic capacitance of a few pF can resu
 
 <p>Video <a href="https://www.youtube.com/watch?v=fpcyilzJE7c&feature=youtu.be">👉Video</a>
 
+<p>Products <a href="http://www.farsens.com/en/products/eval01-shadow-rm-l108g/">👉Products</a>
 
 
 
