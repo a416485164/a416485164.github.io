@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Surface MIMO: Using Conductive Surfaces For MIMO Between Small Devices
+title:      Surface MIMO:Using Conductive Surfaces For MIMO Between Small Devices
 subtitle:   MIMO
 date:       2019-04-21
 author:     Jackie
