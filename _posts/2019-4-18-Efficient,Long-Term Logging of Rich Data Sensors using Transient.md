@@ -47,9 +47,9 @@ and energy from zero, while maintaining a low cost, small form factor, high effi
 
 — Energy Management Unit (EMU) that efficiently converts variable low power levels to short, high power energy bursts.
 
-— Feedback-based Dynamic Energy Burst Scaling (DEBS) technique to track the load’s optimal power point.
+— Feedback-based Dynamic Energy Burst Scaling (DEBS) technique to track the load’s optimal power point. The DEBS technique is based on a feedback loop (Fig. 1) that allows the load to configure the EMU to supply the energy burst at the optimal operating point.
 
-— Non-Volatile Memory Hierarchy (NVMH) that reduces the energy cost of long-term data logging.
+— Non-Volatile Memory Hierarchy (NVMH) that reduces the energy cost of long-term data logging. NVMH = FRAM + SD，Firstly, store the data in FRAM. When the FRAM data is full, FRAM can write data to SD.
 
 — Accurate model to optimize system’s application-specific parameters for low input power scenarios, including energy and data buffer sizes as well as harvester’s dimension.
 
@@ -65,11 +65,27 @@ and energy from zero, while maintaining a low cost, small form factor, high effi
 
 ***
 
-![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/EMU2.jpg)
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/EMU11.jpg)
+
+***
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/EMU12.jpg)
+
+***
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/EMU13.jpg)
+
+***
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/EMU14.jpg)
 
 ***
 
 ![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/EMU7.jpg)
+
+***
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/EMU2.jpg)
 
 ***
 
