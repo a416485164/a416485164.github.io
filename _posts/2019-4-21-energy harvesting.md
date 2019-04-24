@@ -26,18 +26,12 @@ Wireless energy transfer (WET)—that is, the ability to move energy across spac
 
 Energy harvesting solutions should present a set of desirable properties:
 
-- EH1:high energy density. Sources should bear an intrinsically high energy content; because of the limited efficiency of current extraction techniques, harvesting is
+- EH1 : **high energy density**. Sources should bear an intrinsically high energy content; because of the limited efficiency of current extraction techniques, harvesting is
 useful only whenever the energy density of the source can compensate it.
-- EH2: high efficiency. To justify the added system complexity, a certain extraction
-technique should be able to take out the highest possible fraction of the energy
-density offered by a given source.
-- EH3: small form factor. The extraction technique should operate at micro-level
-and the harvesting device be realizable in small form factors, ideally at most on the
-scale of the WSN node, not to complicate the deployments.
-- EH4: high robustness. The harvesting equipment should be sufficiently reliable
-and require limited maintenance, even if exposed to stressful environmental phenomena; ideally, it should not further constrain the WSN lifetime.
-- EH5: low cost. The harvesting equipment should be attainable at low cost, not to
-significantly impact the system’s total cost of ownership.
+- EH2 : **high efficiency**. To justify the added system complexity, a certain extraction technique should be able to take out the highest possible fraction of the energy density offered by a given source.
+- EH3 : **small form factor**. The extraction technique should operate at micro-level and the harvesting device be realizable in small form factors, ideally at most on the scale of the WSN node, not to complicate the deployments.
+- EH4 : **high robustness**. The harvesting equipment should be sufficiently reliable and require limited maintenance, even if exposed to stressful environmental phenomena; ideally, it should not further constrain the WSN lifetime.
+- EH5 : **low cost**. The harvesting equipment should be attainable at low cost, not to significantly impact the system’s total cost of ownership.
 
 ***
 
