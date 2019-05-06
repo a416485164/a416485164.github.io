@@ -48,7 +48,7 @@ H11v2 = H21v3
 
 Since these two vectors are already aligned, there is a vector that is orthogonal to both of them, and thus the AP can decode. 
 
-Note that without alignment, AP1 could not decode because H11~v2 and H21~v3 would have different directions,
+Note that without alignment, AP1 could not decode because H11v2 and H21v3 would have different directions,
 and no vector will be orthogonal to both.
 
 
