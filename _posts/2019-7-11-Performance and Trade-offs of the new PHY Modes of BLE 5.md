@@ -4,7 +4,7 @@ title:      Performance and Trade-offs of the new PHY Modes of BLE 5
 subtitle:   Author:Michael Spörk，Carlo Alberto Boano and Kay Römer -- Graz University of Technology
 date:       2019-07-11
 author:     Jackie
-header-img: img/Picture/action-air-shooting-aircraft-319968.jpg
+header-img: img/post-bg-rwd.jpg
 catalog: true
 tags:
     - BLE 5
