@@ -1,93 +1,143 @@
 ---
 layout:     post
-title:      Exploiting Multi-Cell Battery for Mobile Devices:Design, Management, and Performance
-subtitle:   Author:Sungwoo Baek, Minyoung Go, Seokjun Lee and Hojung Cha -- Yonsei University
-date:       2019-07-15
+title:      Performance and Trade-offs of the new PHY Modes of BLE 5
+subtitle:   Author:Michael Spörk，Carlo Alberto Boano and Kay Römer -- Graz University of Technology
+date:       2019-07-11
 author:     Jackie
-header-img: img/post-bg-miui6.jpg
+header-img: img/Picture/accounting-banking-calculator-938965.jpg
 catalog: true
 tags:
-    - Multi-Cell Battery
+    - BLE 5
 ---
 
-# Exploiting Multi-Cell Battery for Mobile Devices:Design, Management, and Performance
+# Performance and Trade-offs of the new PHY Modes of BLE 5
 
 ***
 
 ## Abstract
 
-Extending battery lifetime is an important issue for mobile devices. While extensive attempts have been made at the software level, optimization often risks hampering user experience. One fundamental method to increase battery lifetime is to improve the efficiency of the battery itself. We argue that the multi-cell battery system, which is widely used for enhancing battery efficiency in the electric vehicle (EV) field, can solve this issue. However, due to the hardware constraints and device usage characteristics, battery advancements in the EV field are not directly applicable to mobile devices. In this paper, we propose BattMan, a multi-cell battery management system for mobile devices, for the enhancement of battery efficiency. We develop an accurate battery cell model to estimate the expected battery lifetime considering the recovery effect, the rate capacity effect, and battery aging. We also propose a multicell scheduling algorithm to maximize the overall battery lifetime. We implemented BattMan on recent smartphones and evaluated its impact on battery lifetime. The experimental results show that a two-cell configuration of the proposed system increases battery lifetime by an average of between 14-19%, depending on cell aging, in real usage scenarios over a single-cell battery of the same overall cpacity.We hope the proposed multi-cell battery scheme opens up a new direction towards battery lifetime improvement in mobile devices.
+With the release of Bluetooth Low Energy (BLE) version 5, the Bluetooth Special Interest Group introduced three additional physical (PHY) modes for BLE communication. These PHY modes enable an application to either double its throughput, or significantly improve its reliability, making BLE applicable to an even wider range of application domains. Unfortunately, no experimental study has yet investigated the actual performance of BLE 5’s PHY modes in BLE connections or shown their trade-offs between energy efficiency, reliability, and throughput. Thus, how to use BLE 5’s PHY modes to achieve specific application requirements is still an open question. To fill this gap, we experimentally study the performance of all four BLE 5 PHY modes in BLE connections and observe that it is, indeed, possible to double BLE’s throughput or to increase BLE’s reliability by using the new PHY modes. Furthermore, we provide guidelines using our measurements on how to select the most suitable PHY mode based on specific application requirements.
 
 ***
 
 ## Main content
 
-As the functionality of mobile applications grows more versatile and complex, the demand for high performance mobile devices rapidly increases. Diverse approaches have attempted to prolong battery lifetime, such as software optimization, constraining hardware performance, and device idle time management. Softwarebased
-methods often result in performance issues along with user experience tradeoffs.There are several methods for improving batteries that result in enhanced device lifetime. First, battery capacity can be augmented by increasing the battery size or utilizing new materials in battery production. However, this is unlikely to happen in imminent future, because battery size tends to be smaller and thinner for design purposes, and developing new battery materials is challenging indeed.Another solution is to improve battery efficiency.For
-example, multi-cell batteries could be exploited even for mobile devices. In fact, a multi-cell battery system that consists of several small battery cells instead of a single large one is commonly employed in the EV field. To maximize the lifetime of a multi-cell battery system, the use policy for each constituent cell should be accurately determined at runtime, because the recovery effect and rate capacity effect exhibit different characteristics depending on the discharging current and the number of cells employed in the system. Moreover, the use policy should reflect the degree of cell aging or degradation, often called the State of Health (SoH) of the cell, because the degraded battery cell significantly affects both the recovery effect and the rate capacity effect. This brings us a big challenge, i.e., battery cell modeling. In order for the multi-cell battery system to work in mobile devices, the battery itself should be modeled to predict the battery lifetime accurately considering the battery characteristics mentioned above. The second challenge lies in the development of cell discharge scheduling for multi-cell battery systems, which would increase overall lifetime by maximizing both the rate capacity and recovery effects. To this end, a sophisticated algorithm should be developed to optimize cell usage. In this paper, the author propose BattMan, a prototype of a multi-cell battery system specifically designed for mobile devices, to address these issues. They first developed a battery cell model to estimate its lifetime accurately, considering various factors such as discharging current, SoH, the rate capacity effect, and the recovery effect. They then developed a multi-cell scheduling
-scheme called the weighted SoC-based round robin (WSRR) to select the best use policy which maximizes the efficiency of the rate capacity effect and the recovery effect. A multi-cell battery system utilizes multiple cells instead of a single, large cell for its power source. As described above, two main phenomena of the battery—rate capacity effect and recovery effect— are exploited in the multi-cell configuration.
+Although BLE 5 devices have been available since 2017 [9] and even BLE version 5.1 (enabling a more advanced localization using multiple antennas) has been released in 2019, no experimental study has, to the best of our knowledge, investigated if the new PHY modes of BLE 5 actually perform as advertised when used in BLE connections. Furthermore, how to use the different PHY modes to sustain specific application requirements, such as a certain power consumption, communication reliability, or throughput, has not been studied in detail and still remains an open question.
 
-![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Multi-cell battery/Multi-cell battery1.jpg)
+### Contributions
+In this paper, The author fill this gap and experimentally study the performance of BLE 5 and its new PHY modes. Their investigation allows to understand: 
 
-***
+1. whether the BLE 5 PHYs deliver on their promises.
 
-Figure 2 shows the potentials of a multi-cell system over that of a single-cell battery.
+2. how to select the best PHY for a given application. 
 
-Figure 2(a) illustrates the concept of the rate capacity effect, that is, the available capacity of a battery cell changes subject to power consumption: the smaller the power consumption, the larger the available capacity. 
+To this end, They perform the first comprehensive experimental study of all four BLE 5 PHY modes used in a BLE connection and answer the following questions:
 
-Figure 2(b) illustrates the effective use of the recovery effect. 
+• Does the 2M PHY really allow to double the throughput?
 
-![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Multi-cell battery/Multi-cell battery2.jpg)
+• Do the Coded S2 PHY and the Coded S8 PHY really increase
+the relibility of a BLE connection?
 
-***
+• How does the chosen PHY mode affect the overall power
+consumption of a BLE device?
 
-Figure 3(a) shows that battery lifetime increased approximately 10% over sequential use when the three
-batteries were switched every 30 seconds.
+Based on these measurements, The paper show the trade-off between energy efficiency, reliability, and throughput for each PHY mode and provide guidelines on how to select the most suitable PHY for a given application. For this purpose, we derive the effective throughput and effective power consumption of all four PHY modes for BLE connections with different link quality and investigate:
 
-Figure 3(b) shows the voltage traces of a single battery exhibiting the capacity fade on different C-rates.
+• Which PHY provides the maximum effective throughput?
 
-The experiment shows that the rate capacity effect indeed exists in real device since there is additional
-capacity loss with a high discharge current.
+• Which PHY minimizes the effective power consumption?
 
-![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Multi-cell battery/Multi-cell battery5.jpg)
+With the publication of the BLE 5 specification in June 2016, three additional physical (PHY) modes, the 2M, the Coded S2, and the Coded S8 PHY mode, were introduced. While the 2M PHY, where the M stands for Megasymbols/s (Msym/s), promises twice the data rate compared to the existing 1M PHY mode, the two Coded PHY modes are meant to increase the communication reliability of BLE devices.
 
-***
+#### 1M PHY.
 
-The results in Figure 4 show that the efficiency of both effects increases with the degree of aging (i.e.,
-toward low SoH).
+In this mode, the modulation scheme supports a physical modulation of 1 Msym/s, meaning that transmitting a single bit of payload takes 1 μs. All packet data is not coded and, therefore, has no error correction.
 
-![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Multi-cell battery/Multi-cell battery6.jpg)
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Performance and Trade-offs of the new PHY Modes of BLE 5/BLE1.jpg)
 
 ***
 
-Figure 5 shows that the best use policy which shows the maximum lifetime gain changes with discharging current.
+Fig. 1a shows the link-layer packet format of the 1M PHY mode. The preamble is 1-byte long and is followed by 4 bytes containing the access address. After the Protocol Data Unit (PDU), which has a variable length between 2 and 257 bytes, the packet ends with a 3-byte CRC checksum, which is used to check for packet corruption.
 
-With low discharging current, utilizing recovery effect is more efficient while rate capacity effect is dominant under high discharging current.
+#### 2M PHY.
 
-![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Multi-cell battery/Multi-cell battery3.jpg)
+This mode uses a physical modulation of 2 Msym/s, resulting in 0.5 μs of air time for a single payload bit.
+Similar to the 1M PHY, data sent with the 2M PHY is not coded and has no error correction. The 2M PHY link-layer packet format is similar to the format of the 1M PHY shown in Fig. 1a, however a 2 byte preamble is used. Hence, the new 2M PHY promises twice the throughput at the cost of a lower reliability for poor link qualities.
 
-***
+#### Coded S2 PHY.
 
-Figure 6 shows the overall architecture of BattMan. The BattMan hardware monitors the device’s discharge
-current, and also the status of each cell such as voltage, SoC, and SoH.
+This mode uses a physical modulation of 1 Msym/s, but makes use of forward error correction (FEC) with a symbol coding of 2 (S2), leading to an increased robustness. A single data bit encoded with S2 coding takes 2 μs on the air, resulting in a data rate of 500 kb/s.
 
-As the number of charging/discharging cycle increases, a battery’s internal resistance becomes larger. 
-The increased voltage during recovery is caused by the capacitances in RC networks. In other words, The author consider that the electric charge is stored in capacitance during discharging and it is returned to battery in recovery phase, increasing cells voltage.
-
-![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Multi-cell battery/Multi-cell battery4.jpg)
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Performance and Trade-offs of the new PHY Modes of BLE 5/BLE1.jpg)
 
 ***
 
-### Contribution :
-1. They provide an accurate battery cell model to estimate the battery lifetime considering the rate capacity effect, the recovery effect, and the SoH factor. Also, a runtime algorithm for optimizing the multi-cell use policy is proposed to maximize battery lifetime.
+The link layer packet format of this mode is shown in Fig. 1b. As this figure shows, the packet is split into three parts: a preamble, a FEC block 1, and a FEC block 2. The preamble is 80 μs long and is sent without coding. The FEC block 1 contains the access address as well as the coding indicator (CI) and ends with the first termination field (TERM1). The FEC block 2 contains the PDU and a 3-byte CRC checksum and is terminated by a second termination field (TERM2). According to the BLE specification [4], even when a packet is sent with the Coded S2 PHY, the FEC block 1 always uses S8 Coding. Compared to the 1M PHY, this PHY improves BLE’s reliability, at the cost of less throughput and an increased power consumption.
 
-2. The proposed scheme is implemented in real mobile devices and delivers battery lifetime extension. Various experiments conducted in real application scenarios validate the effectiveness of the proposed scheme in terms of battery lifetime improvement.
+#### Coded S8 PHY.
+
+The Coded S8 PHY uses an even more robust coding and error correction scheme than the Coded S2 PHY. This
+PHY also transmits with a physical modulation of 1 Msym/s, but uses an FEC with a symbol coding of 8 (S8) for the whole packet. Using the Coded S8 PHY, a single data bit takes 8 μs on the air. Fig. 1b shows the link-layer packet format of the Coded S8 PHY mode. Using the Coded S8 PHY, all packet fields are sent with a coding of 8, resulting in a data rate of 125 kb/s for the whole packet. The Coded S8 PHY promises to improve BLE’s reliability for poor link qualities even further, at the cost of a lower throughput and increased power consumption compared to the other PHYs.
+
+BLE supports two modes of communication: a connection-less and a connection-based mode.  In connection-less mode, if two devices need to bidirectionally exchange data packets, they need to use connection-less primitives to establish a BLE connection. Every connection event starts with a link-layer packet from the master, to which the slave responds. In case master and slave have no additional data to send, the connection event ends after this mandatory exchange of keep-alive messages.If, however, more data needs to be transmitted, master and slave keep exchanging link-layer packets until all data is successfully sent or the maximum connection event length (tCE ) is reached. The last link-layer packet during a connection event is always sent by the slave, after which both devices disable their radio and resume communication at the next connection event.
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Performance and Trade-offs of the new PHY Modes of BLE 5/BLE2.jpg)
 
 ***
+
+Fig. 2 shows an example where, after the connection setup using connection-less primitives, the master starts connection event N0 by sending a short keep-alive packet to the slave. The slave has data to send and therefore responds with a link-layer packet (which is longer than the keep-alive packet from the master) carrying the
+data. During connection event N1, both devices have no data to transmit and therefore only exchange the mandatory keep-alive packets. In connection event N2, however, the master has data to send and therefore starts the connection event by sending a linklayer packet carrying data. Because the master has additional data to send, it waits for the slave’s response before sending a second link-layer packet containing the rest of the data. The slave responds with a second link-layer packet, ending the connection event.
+
+In the connection-based BLE mode, the link layer autonomously handles packet acknowledgment (ACK) and flow control using a 1-bit ACK field and a 1-bit sequence number in every link-layer packet header. If a link-layer packet was not successfully sent, it is automatically retransmitted. To further ensure reliable communication,
+BLE connections use adaptive frequency hopping (AFH). Using AFH, one of the enabled data channels in the data channel map is selected at the start of every connection event and is used by master and slave to exchange all packets during the event.
+
+#### Power Consumption
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Performance and Trade-offs of the new PHY Modes of BLE 5/BLE3.jpg)
+
+***
+
+First, we can clearly observe that PAVG (average power consumption) increases when using a lower connection
+interval, as the BLE radio is more active. Second, we can see a significant difference in power consumption when different PHY modes are used. As expected, the 2M PHY mode results in the lowest PAVG, as it has the lowest radio duty cycle due to its fast data rate. The Coded S8 PHY, however, leads to the highest power consumption, because of its higher radio duty cycle caused by the overhead of the employed coding scheme.
+Compared to the legacy 1M PHY, the 2M PHY consumes approximately 8% less power in our experiments. The Coded S2 and S8 PHY consume approximately 61% and 70% more power compared to the 1M PHY for all four connection intervals, respectively.
+
+#### Throughput
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Performance and Trade-offs of the new PHY Modes of BLE 5/BLE5.jpg)
+
+***
+
+Fig. 5 shows the TLL for different PHY modes and connection intervals measured at the master. As expected, the 2M PHY, having a physical modulation of 2 Msym/s, provides the highest throughput of all PHYs, while the Coded S8 PHY has the lowest TLL in our experiments.
+
+#### Packet Reception Rate
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Performance and Trade-offs of the new PHY Modes of BLE 5/BLE6.jpg)
+
+***
+
+Fig. 6 shows the PRR of the four PHY modes of BLE 5 for different attenuation values. As expected, the 2M PHY mode has the lowest PRR out of the four available PHY modes. The Coded S2 PHY and the Coded S8 PHY increase the link-layer PRR of BLE connections for poor link qualities, and therefore BLE’s reliability, due to their employed coding schemes.
+
+#### Robustness to Interference
+
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/Performance and Trade-offs of the new PHY Modes of BLE 5/BLE7.jpg)
+
+***
+
+Fig. 7 shows the average PRR of the BLE connection for different PHY modes and Wi-Fi transmission power settings. The Coded S8 PHY mode provides the highest PRR and thus the highest reliability under interference. The data also show that the Coded S2 and S8 PHY increase the link budget by 5dBm under Wi-Fi interference.
+
+##### Which PHY mode of BLE 5 provides the maximum effective data throughput?
+
+In case only a few link-layer data packets are corrupted and thus need to be retransmitted, the 2M PHY mode
+provides the highest TEFF(the effective link-layer throughput). If packets are frequently corrupted,
+because of a poor link quality of the underlying BLE connection, the Coded S8 PHY is able to recover most corrupted packets and hence achieves the highest effective throughput.
+
+##### Which PHY mode of BLE 5 minimizes the effective power consumption?
+
+The most energy efficient PHY mode mainly depends on the link quality of the BLE connection. In case only a few link-layer packets are corrupted and therefore retransmitted, due to a good link quality, the 2M PHY mode provides the most energy-efficient communication. When packets are frequently corrupted, the Coded S8 PHY leads to a lower power consumption, as most corrupted packets can be recovered and do not need to be retransmitted. 
 
 ### Paper
 
-<p>Paper <a href="https://mobed.yonsei.ac.kr/mobed_pages/pdf/index.php?name=Battman">👉Paper Pages</a>
+<p>Paper <a href="http://39.137.36.61:6310/www.carloalbertoboano.com/documents/spoerk19ble5phy.pdf">👉Paper Pages</a>
 
 
 
