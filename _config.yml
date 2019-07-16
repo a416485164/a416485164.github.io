@@ -19,7 +19,7 @@ sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in b
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-#zhihu_username:     qiubaiying
+zhihu_username:     a416485164
 github_username:    a416485164
 #facebook_username:  baiying.qiu.7
 #jianshu_username:   e71990ada2fd
@@ -110,5 +110,8 @@ friends: [
     },{
         title: "Twitter",
         href: "https://twitter.com/a416485164"
+    },{
+        title: "Zhihu",
+        href: "https://www.zhihu.com/people/a416485164-17/activities"
     }
 ]
