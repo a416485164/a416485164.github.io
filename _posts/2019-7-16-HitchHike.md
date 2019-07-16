@@ -95,7 +95,7 @@ throughput of up to 300Kbps at ranges of up to 34m and ranges of up to 54m where
 
 ***
 
-### Paper,Video and Slide
+### Paper, Video and Slide
 
 <p>Paper <a href="https://pengyuzhang.github.io/papers/sensys16_back_comm.pdf">👉Paper Pages</a><p>
 
@@ -103,12 +103,10 @@ throughput of up to 300Kbps at ranges of up to 34m and ranges of up to 54m where
 
 <p>Video <a href="https://www.youtube.com/watch?v=4tmatoD0I1o">👉Video</a><p>
 
-(In the purpose of learning and upload your Slide to the blog, I hope you don't mind.
-If you are not happy, please contact me and I immediately delete. Thank you!)
-
 <p>Slide <a href="https://www.youtube.com/watch?v=4tmatoD0I1o">👉Slide</a><p>
 
-
+(In the purpose of learning and upload your Slide to the blog, I hope you don't mind.
+If you are not happy, please contact me and I immediately delete. Thank you!)
 
 
 
