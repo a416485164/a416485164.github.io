@@ -14,6 +14,10 @@ tags:
 
 ***
 
+![](https://raw.githubusercontent.com/a416485164/a416485164.github.io/master/img/NetScatter/fig1.jpg)
+
+***
+
 ## Abstract
 
 The paper presents the first wireless protocol that scales to hundreds of concurrent transmissions from backscatter devices. The key innovation is a distributed coding mechanism that works below the noise floor, operates on backscatter devices and can decode all the concurrent transmissions at the receiver using a single FFT operation.
