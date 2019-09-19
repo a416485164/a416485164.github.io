@@ -106,7 +106,7 @@ An overview of the decoder components is given in Figure5.
 
 As a first step in the demodulation process, the receiver must detect the LoRa preamble. To this end, the authors exploit the repeating property of the preamble by using the Schmidl-Cox algorithm.
 
-M(d) = |P(d)|^2 / R(d)^2
+M(d)=|P(d)|^2/R(d)^2
 
 The timing metric M(d) essentially calculates a normalized autocorrelation of length L over two symbols, which will be maximal when two consecutive symbols are encountered in the signal. To efficiently compute Equation in software, it can use Single Instruction, Multiple Data (SIMD) instructions provided by Vector Optimized Library of Kernels (VOLK).
 
